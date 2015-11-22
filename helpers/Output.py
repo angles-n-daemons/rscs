@@ -2,8 +2,6 @@
 # for rcsc
 
 import RPi.GPIO as GPIO
-import time
-GPIO.setmode(GPIO.BCM)
 
 class Output:
 	def __init__(self, loc, invert = False):
