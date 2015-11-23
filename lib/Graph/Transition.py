@@ -9,4 +9,4 @@ class Transition:
 		self.evaluator = evaluator
 
 	def evaluate(self):
-		return self.evaluator.eval(self.condition)
+		return self.evaluator.evaluate(self.condition)
