@@ -17,5 +17,5 @@ class Input:
 	def read(self):
 		msg = GPIO.input(self.loc)
 		# logical xor on invert to see whether to invert
-		msg = msg ^ self.invert 
+		return msg ^ self.invert 
 

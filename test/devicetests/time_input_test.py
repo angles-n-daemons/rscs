@@ -1,3 +1,5 @@
+# author: brian dillmann
+# for rscs
 from context import Timer 
 import unittest
 import time

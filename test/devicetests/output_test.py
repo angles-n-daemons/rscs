@@ -1,3 +1,5 @@
+# author: brian dillmann
+# for rscs
 from context import Output
 import unittest
 import RPi.GPIO as GPIO

@@ -1,3 +1,5 @@
+# author: brian dillmann
+# for rscs
 from context import Input
 from context import Output
 from context import Timer
