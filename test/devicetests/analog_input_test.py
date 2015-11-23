@@ -2,7 +2,7 @@ from context import AnalogInput
 import unittest
 import RPi.GPIO as GPIO
 
-class test_simple_output(unittest.TestCase):
+class test_analog_input(unittest.TestCase):
 
 	def setUp(self):
 		self.out_pin = 2

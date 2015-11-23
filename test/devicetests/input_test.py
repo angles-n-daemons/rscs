@@ -11,14 +11,14 @@ class test_simple_input(unittest.TestCase):
 	def test_init_errs(self):
 		# try to initialize input with illegal location 
 		with self.assertRaises(TypeError):
-			input = Input('a')
+			input = Input('input1', 'a')
 
 		with self.assertRaises(ValueError):
 			# try to initialize a port that is a legal GPIO input
-			input = Input(500)
+			input = Input('input1', 500)
 
 	def test_read(self):
-		input = Input(22)
+		input = Input('input1', 22)
 		x = input.read() 
 
 if __name__ == 'main':

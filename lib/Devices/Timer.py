@@ -3,8 +3,11 @@
 import time
 
 class Timer:
-	def __init__(self, interval='s'):
+	def __init__(self, name, interval='s'):
+		if not name.replace(' ', '').isalnum():
+                        raise ValueError('Device names must only contain letters, numbers and spaces')
 		self.start_time()
+		self.name = name
 		if interval == 'ms':
 			self.interval = .001
 		if interval == 's':

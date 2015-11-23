@@ -4,12 +4,14 @@
 import RPi.GPIO as GPIO, time
 
 class AnalogInput:
-	def __init__(self, loc):
+	def __init__(self, name, loc):
 		if not isinstance(loc, (int, long)):	
 			raise TypeError('Output Location must be an integer')
-		self.loc = loc
-
+		if not name.replace(' ', '').isalnum():
+			raise ValueError('Device names must only contain letters, numbers and spaces')
 		GPIO.setup(loc, GPIO.IN)
+		self.name = name
+		self.loc = loc
 
 	def read(self):
 		reading = 0
