@@ -2,7 +2,7 @@
 # for rscs
 import time
 
-class TimeInput:
+class Timer:
 	def __init__(self, interval='s'):
 		self.start_time()
 		if interval == 'ms':

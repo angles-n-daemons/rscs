@@ -1,17 +1,17 @@
-from context import TimeInput 
+from context import Timer 
 import unittest
 import time
 
 class test_simple_output(unittest.TestCase):
 
 	def test_start_on_init(self):
-		input = TimeInput()
+		input = Timer()
 		t = input.read()
 		self.assertGreater(t, 0)
 
 	def test_seconds_interval(self):
-		input1 = TimeInput()
-		input2 = TimeInput('s')
+		input1 = Timer()
+		input2 = Timer('s')
 		time.sleep(10)
 		t1 = input1.read()
 		t2 = input2.read()
@@ -21,7 +21,7 @@ class test_simple_output(unittest.TestCase):
 		self.assertLess(t2, 11)
 
 	def test_reset(self):
-		input = TimeInput('s')
+		input = Timer('s')
 		time.sleep(5)
 		t = input.read()
 		self.assertGreater(t, 4)
@@ -30,14 +30,14 @@ class test_simple_output(unittest.TestCase):
 		self.assertLess(t, 1)
 
 	def test_millis(self):
-		input = TimeInput('ms')
+		input = Timer('ms')
 		time.sleep(1)
 		t = input.read()
 		self.assertGreater(t, 900)
 		self.assertLess(t, 1100)
 
 	def test_mins(self):
-		input = TimeInput('m')
+		input = Timer('m')
 		time.sleep(3)
 		t = input.read()
 		self.assertLess(t, 1)
