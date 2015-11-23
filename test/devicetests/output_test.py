@@ -9,6 +9,7 @@ class test_simple_output(unittest.TestCase):
 	def setUp(self):
 		self.out_pin = 2
 		GPIO.setmode(GPIO.BCM)
+		GPIO.setwarnings(False)
 
 	def test_init_errs(self):
 		# try to initialize output with illegal location 

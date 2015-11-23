@@ -14,13 +14,13 @@ class test_analog_input(unittest.TestCase):
 	def test_init(self):
 		# try to initialize output with illegal location 
 		with self.assertRaises(TypeError):
-			analog_input = AnalogInput('a')
+			analog_input = AnalogInput('i', 'a')
 
 		with self.assertRaises(ValueError):
 			# try to initialize a port that is a legal GPIO output
-			analog_input = AnalogInput(500)
+			analog_input = AnalogInput('i', 500)
 	def test_works(self):
-		analog_input = AnalogInput(18)
+		analog_input = AnalogInput('i', 18)
 		x = analog_input.read()
 		# sanity check
 		print x
